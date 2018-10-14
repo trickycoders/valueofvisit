@@ -2,10 +2,20 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import Welcome from './pages/Welcome';
+import { connect } from 'react-redux';
+import { simpleAction } from './actions/simpleAction'
 import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+  }
+
+  simpleAction = (event) => {
+    this.props.simpleAction();
+  }
+
   render() {
     return (
       <Router>
@@ -34,4 +44,12 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = state => ({
+  ...state
+});
+
+const mapDispatchToProps = dispatch => ({
+  simpleAction: () => dispatch(simpleAction())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
