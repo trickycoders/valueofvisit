@@ -1,0 +1,23 @@
+
+
+
+.header{
+    margin-top: 250px;    
+}
+
+.header-subtext{
+    margin-top: 20px;    
+}
+
+.signup-btn{
+    background: #c10e4a;
+    padding: 20px;
+    text-decoration: none;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 2px;
+    text-align: center;  
+    margin-top:30px;
+    display: inline-block;
+}
