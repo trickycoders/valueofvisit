@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import Menu from '../components/Menu/Menu';
 import s from './welcome.module.css';
 import Widget from '../components/Widget/Widget';
-
+import CnameLink from '../components/CnameLink/CnameLink';
+import WidgetLink from '../components/WidgetLink/WidgetLink';
+import ShowCnameLinks from '../components/ShowCnameLinks/ShowCnameLinks';
 
 class Welcome extends Component {
     constructor(props) {
@@ -31,32 +33,10 @@ class Welcome extends Component {
         });
     }
 
-    linkMyCname = () => {
-        const {
-            cnameValue,
-        } = this.state;
-
-        this.setState({
-            isDomainLinked: true,
-        });
-        this.toggleCNAMELinkBox();
-
-        console.log('cnameValue: ', cnameValue);
-        alert('Successfully linked. Thank you.');
-    }
-
-    setCnameValue = (event) => {
-        this.setState({
-            cnameValue: event.target.value,
-        });
-    }
-
     render(){
         const {
             isCnameLinkVisible,
             isWidgetLinkVisible,
-            cnameValue,
-            isDomainLinked,
         } = this.state;
 
         return (
@@ -78,30 +58,13 @@ class Welcome extends Component {
                 </div>
 
                 <div className={s['integeration-options']}>
-                {isCnameLinkVisible && 
-                        <div className={s['linkCnameBox']}>
-                            <div className={s['cnameMsg']}>Point your domains CNAME to <a href='' style={{cursor:'not-allowed'}}>cname.emptypagesaveslives.com</a></div>
-                            <input type='text ' name='cnameValue' className={s['cnameValue']} value={cnameValue} onChange={this.setCnameValue}/>
-                            <button onClick={this.linkMyCname}>Link ME</button> <button onClick={this.toggleCNAMELinkBox}>Cancel</button>
-                            {isDomainLinked && <div>Successfully Linked. Want to link more domain</div>}
-                        </div>
-                }
-                {isWidgetLinkVisible && 
-                    <div className={s['linkWidgetBox']}>
-                        <div>Add 404 Widget</div>
-                        <input type='text' name = 'asdas' />
-                        <div>
-                            <Widget domain='google.com'/>
-                        </div>
-                        <textarea value='hello' readOnly className={s['embed-textarea']}/>
-                        <div>
-                            <div> Funds Raised </div>
-                            <div> Views </div>
-                        </div>
-                    </div>  
-                }
+                {isCnameLinkVisible && <CnameLink toggleCNAMELinkBox={this.toggleCNAMELinkBox}/>}
+                {isWidgetLinkVisible && <WidgetLink />}
+                
                 </div>
-
+                <div className={s['integeration-options']}>
+                    <ShowCnameLinks />     
+                </div>   
 
  
 
