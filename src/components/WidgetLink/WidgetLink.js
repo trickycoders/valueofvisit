@@ -22,8 +22,8 @@ class WidgetLink extends Component{
             domainNameValue,
         } = this.state;
 
-        const domainLink = `https://${window.location.hostname}/widget/${domainNameValue}`;
-        const textAreaValue = `<iframe width='400' height='645' src='${domainLink}'>`;
+        const domainLink = `https://blackpagesavelives.now.sh/widget/${domainNameValue}`;
+        const textAreaValue = `<iframe width='400' height='645' src='${domainLink}' style='border: 0px;width: 420px;'></iframe>`;
         return(
             <div className={'linkWidgetBox'}>
                 <div className='linkWidgetBoxCol'> 
