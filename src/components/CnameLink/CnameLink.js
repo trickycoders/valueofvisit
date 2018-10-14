@@ -60,8 +60,8 @@ class CnameLink extends Component {
         return(
         <div className={'linkCnameBox'}>
             <div className={'cnameMsg'}>Point your domains CNAME to <a href='' style={{cursor:'not-allowed'}}>cname.blankpagesaveslives.com</a></div>
-            <div className>
-                <input type='text ' name='cnameValue' className={'cnameValue'} value={cnameValue} onChange={this.setCnameValue} placeholder="Your Domain Name"/>
+            <div>
+                <input type='text ' name='cnameValue' className='cnameValue' value={cnameValue} onChange={this.setCnameValue} placeholder="Your Domain Name"/>
             </div>
             <div className={'action-box'}>            
                 <button onClick={this.linkMyCname}>Link ME</button>
