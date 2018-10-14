@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-// import './ShowCnameLinks/ShowCnameLinks.css';
+import s from './ShowCnameLinks.module.css';
 
 class ShowCnameLinks extends Component {
     constructor(props) {
@@ -27,13 +27,15 @@ class ShowCnameLinks extends Component {
         } = this.state;
         console.log(cnameValues);
         return(
-            <div className='linkWidgetBox'>
-                <div> 
-                    {cnameValues && cnameValues.map(cnameValue => (
-                        <div key={cnameValue.type+cnameValue.cname}>{cnameValue.cname}</div>
-                        ))
-                    }
-                </div>
+            <div className={s['cname-box']}>
+                {cnameValues && cnameValues.map(cnameValue => (
+                    <div key={cnameValue.type+cnameValue.cname} className={s['cname-item']}> 
+                        <div>                            
+                            <a href={`/iframe/${cnameValue.cname}`} >{cnameValue.cname}</a>
+                        </div>                        
+                    </div>
+                    ))
+                }                
             </div>
         )
     }

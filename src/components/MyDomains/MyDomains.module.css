@@ -1,0 +1,26 @@
+.header {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 2px 5px 0px !important;
+}
+
+.header-inner {
+  -webkit-box-align: center;
+  align-items: center;
+  display: flex;
+  height: 80px;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  max-width: 1200px;
+  position: relative;
+  width: 100%;
+  padding: 0px 24px;
+}
+
+.header-logo{
+  color: #2196F3;
+  font-weight: 600;
+}
