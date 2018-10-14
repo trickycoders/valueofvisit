@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import {connect} from 'react-redux';
+import {simpleAction} from './actions/simpleAction';
 import Home from './pages/Home';
 import Welcome from './pages/Welcome';
 import { connect } from 'react-redux';
 import { simpleAction } from './actions/simpleAction'
-import logo from './logo.svg';
+import Iframe from './pages/Iframe';
+import WidgetPage from './pages/WidgetPage';
 import './App.css';
+
+
 
 class App extends Component {
   constructor(props) {
@@ -20,24 +25,10 @@ class App extends Component {
     return (
       <Router>
       <div className="App">        
-          <div>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/welcome">About</Link>
-              </li>
-              <li>
-                <Link to="/topics">Topics</Link>
-              </li>
-            </ul>
-
-            <hr />
-
             <Route exact path="/" component={Home} />
             <Route path="/welcome" component={Welcome} />
-          </div>        
+            <Route path="/iframe" component={Iframe} />
+            <Route path="/widget" component={WidgetPage} />
       </div>
       </Router>
     );
