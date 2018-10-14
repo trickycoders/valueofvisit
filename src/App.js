@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Welcome from './pages/Welcome';
 import Iframe from './pages/Iframe';
 import WidgetPage from './pages/WidgetPage';
+import Stats from './pages/Stats';
 import './App.css';
 
 
@@ -25,6 +26,7 @@ class App extends Component {
       <div className="App">        
             <Route exact path="/" component={Home} />
             <Route path="/welcome" component={Welcome} />
+            <Route path="/stats" component={Stats} />
             <Route path="/iframe/:domainname" component={Iframe} />
             <Route path="/widget/:domainname" component={WidgetPage} />
       </div>
