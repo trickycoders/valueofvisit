@@ -6,7 +6,7 @@ FROM node:alpine
 
 WORKDIR /app
 ADD . /app
-RUN npm i -g
+RUN npm i
 
 RUN npm run build
 

@@ -28,6 +28,7 @@ class ShowCnameLinks extends Component {
         console.log(cnameValues);
         return(
             <div className={s['cname-box']}>
+                <div className={s['cname-header']}>Connected Domains</div>
                 {cnameValues && cnameValues.map(cnameValue => (
                     <div key={cnameValue.type+cnameValue.cname} className={s['cname-item']}> 
                         <div>                            
