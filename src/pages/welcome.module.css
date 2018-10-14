@@ -27,6 +27,32 @@
     border: 1px solid #2196F3;
 }
 
+.linkCnameBox, .linkWidgetBox {
+    padding: 2%;
+    position: relative;
+    width: fit-content;
+    margin: auto;
+    border: 1px solid #000;
+    box-shadow: 1px 1px 10px 2px #616161;
+}
 
+.cnameMsg {
+    padding: 1em;
+}
 
+.cnameValue {
+    width: 50%;
+    padding: 5px;
+}
 
+.linkCnameBox button {
+    padding: 6px;
+    margin: 0 0px 0 5px;
+    background: #ffffff;
+    color: #c31055;
+    border: 1px solid;
+}
+
+.linkCnameBox button:nth-child(2) {
+    margin: 0;
+}
