@@ -6,13 +6,14 @@ FROM node:alpine
 
 WORKDIR /app
 ADD . /app
+RUN npm i -g
 
-RUN npm install
-
-RUN npm install pm2 -g
+RUN npm run build
 
 EXPOSE 8080
 
 RUN node -v
+
+RUN ls -lrth
 
 ENTRYPOINT [ "node", "server.js" ]
