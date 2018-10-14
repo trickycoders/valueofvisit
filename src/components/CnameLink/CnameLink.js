@@ -42,7 +42,7 @@ class CnameLink extends Component {
         // this.props.toggleCNAMELinkBox();
 
         console.log('cnameValue: ', cnameValue);
-        alert('Successfully linked. Thank you.');
+        window.location.reload();
     }
 
     setCnameValue = (event) => {
