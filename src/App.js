@@ -25,8 +25,8 @@ class App extends Component {
       <div className="App">        
             <Route exact path="/" component={Home} />
             <Route path="/welcome" component={Welcome} />
-            <Route path="/iframe" component={Iframe} />
-            <Route path="/widget" component={WidgetPage} />
+            <Route path="/iframe/:domainname" component={Iframe} />
+            <Route path="/widget/:domainname" component={WidgetPage} />
       </div>
       </Router>
     );

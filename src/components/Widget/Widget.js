@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
+import { withRouter } from "react-router";
 import s from './Widget.module.css';
 
 class Widget extends Component {
     render(){
         const {domain} = this.props; 
+        const {
+            match: {
+                params: {
+                    domainname = domain
+                } = {}
+            } = {}
+        } = this.props;
         return (
             <div className={s['widget']}>
                 <div className={s['website-msg']}>
-                    Thanks for visiting <strong>{domain}</strong>. 
+                    Thanks for visiting <strong>{domainname}</strong>
                     <div className={s['website-msg-subtext']}>
                     But unfortunately, this page is not available right now. We don't want to deceive you and have a purpose of your visit. Your support <strong>Baby Basavaraj</strong> to save his life or Go to our <a href='#' >home page </a>
                     </div>
@@ -37,17 +45,7 @@ class Widget extends Component {
                     <a href='https://milaap.org/fundraisers/support-j-basavaraj' className={s['support-btn']}>Support Basavaraj</a>
                 </div>
             </div>
-        );    
-    
+        );
     }
 }
-
-/*
-const Widget = (
-    domain
-) => (
-
-  );
-
-*/
-export default Widget;
+export default withRouter(Widget);
