@@ -42,7 +42,7 @@ class Widget extends Component {
                 </div>
 
                 <div className={s['support']}>
-                    <a href='https://milaap.org/fundraisers/support-j-basavaraj' className={s['support-btn']}>Support Basavaraj</a>
+                    <a href='https://milaap.org/fundraisers/support-j-basavaraj' target='_blank' className={s['support-btn']}>Support Basavaraj</a>
                 </div>
             </div>
         );
