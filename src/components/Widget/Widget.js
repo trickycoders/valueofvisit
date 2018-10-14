@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import s from './Widget.module.css';
 
-const Menu = () => (
+const Widget = () => (
     <div className={s['widget']}>
         <div className={s['website-msg']}>
             Thanks for visiting <strong>hackinout.co</strong>. 
@@ -36,4 +36,4 @@ const Menu = () => (
     </div>
   );
 
-export default Menu;
+export default Widget;

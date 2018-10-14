@@ -4,8 +4,6 @@ import {connect} from 'react-redux';
 import {simpleAction} from './actions/simpleAction';
 import Home from './pages/Home';
 import Welcome from './pages/Welcome';
-import { connect } from 'react-redux';
-import { simpleAction } from './actions/simpleAction'
 import Iframe from './pages/Iframe';
 import WidgetPage from './pages/WidgetPage';
 import './App.css';
