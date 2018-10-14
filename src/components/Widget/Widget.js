@@ -10,11 +10,23 @@ class Widget extends Component {
                 params: {
                     domainname = domain
                 } = {}
+            } = {},
+            location: {
+                search =  '',
             } = {}
         } = this.props;
+        let bgColor = '#c80b54';
+        if(search.trim() !== ''){               
+            console.log('search', search.replace('?color=', ''));
+            bgColor = '#'  + search.replace('?color=', '');
+        }
+        let cssstyles = {
+            background: bgColor,
+            textAlign: 'center !important'
+        }
         return (
             <div className={s['widget']}>
-                <div className={s['website-msg']}>
+                <div className={s['website-msg']} style={cssstyles}>
                     Thanks for visiting <strong>{domainname}</strong>
                     <div className={s['website-msg-subtext']}>
                     But unfortunately, this page is not available right now. We don't want to deceive you and have a purpose of your visit. Your support <strong>Baby Basavaraj</strong> to save his life or Go to our <a href='#' >home page </a>
@@ -33,7 +45,7 @@ class Widget extends Component {
                 </div>
                 <div className={s['progress']}>
                     <div className={s['progress-bar']}>
-                        <div className={s['progress-done']}></div>
+                        <div className={s['progress-done']} style={cssstyles}></div>
                     </div>
                 </div>
 
@@ -42,7 +54,7 @@ class Widget extends Component {
                 </div>
 
                 <div className={s['support']}>
-                    <a href='https://milaap.org/fundraisers/support-j-basavaraj' target='_blank' className={s['support-btn']}>Support Basavaraj</a>
+                    <a href='https://milaap.org/fundraisers/support-j-basavaraj' target='_blank' className={s['support-btn']} style={cssstyles}>Support Basavaraj</a>
                 </div>
             </div>
         );
