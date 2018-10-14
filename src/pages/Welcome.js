@@ -9,7 +9,7 @@ class Welcome extends Component {
         super(props);
 
         this.state = {
-            isCnameLinkVisible: false,
+            isCnameLinkVisible: true,
             isWidgetLinkVisible: false,
             cnameValue: '',
             isDomainLinked: false,
@@ -73,24 +73,46 @@ class Welcome extends Component {
                     <a className={s.options} onClick={this.toggleWidgetLinkBox}>
                         404 Pages Widget
                     </a>      
+
+                    
+                </div>
+
+                <div className={s['integeration-options']}>
+                {isCnameLinkVisible && 
+                        <div className={s['linkCnameBox']}>
+                            <div className={s['cnameMsg']}>Point your domains CNAME to <a href='' style={{cursor:'not-allowed'}}>cname.emptypagesaveslives.com</a></div>
+                            <input type='text ' name='cnameValue' className={s['cnameValue']} value={cnameValue} onChange={this.setCnameValue}/>
+                            <button onClick={this.linkMyCname}>Link ME</button> <button onClick={this.toggleCNAMELinkBox}>Cancel</button>
+                            {isDomainLinked && <div>Successfully Linked. Want to link more domain</div>}
+                        </div>
+                }
+                {isWidgetLinkVisible && 
+                    <div className={s['linkWidgetBox']}>
+                        <div>Add 404 Widget</div>
+                        <input type='text' name = 'asdas' />
+                        <div>
+                            <Widget domain='google.com'/>
+                        </div>
+                        <textarea value='hello' readOnly className={s['embed-textarea']}/>
+                        <div>
+                            <div> Funds Raised </div>
+                            <div> Views </div>
+                        </div>
+                    </div>  
+                }
                 </div>
 
 
-                {isCnameLinkVisible && <div className={s['linkCnameBox']}>
-                    <div className={s['cnameMsg']}>Point your domains CNAME to <a href='' style={{cursor:'not-allowed'}}>cname.emptypagesaveslives.com</a></div>
-                    <input type='text ' name='cnameValue' className={s['cnameValue']} value={cnameValue} onChange={this.setCnameValue}/>
-                    <button onClick={this.linkMyCname}>Link ME</button> <button onClick={this.toggleCNAMELinkBox}>Cancel</button>
-                    {isDomainLinked && <div>Successfully Linked. Want to link more domain</div>}
-                </div>}
+ 
 
-                {isWidgetLinkVisible && <div className={s['linkWidgetBox']}>
-                    <div>Thanks You</div>
-                    <div>
-                        <div> Funds Raised </div>
-                        <div> Views </div>
-                    </div>
-                </div>}
-                <Widget />
+
+                
+
+                <div>
+                    
+
+
+                </div>
         </div>
         )
     }
