@@ -11,6 +11,7 @@ class ReportPage extends Component {
         super(props);
     }
 
+    
     render(){
 
         return (
@@ -20,16 +21,16 @@ class ReportPage extends Component {
                     Reports 
                 </h2>
                 <div style={{display: 'flex', width: '900px', margin: 'auto'}}>
-                    <div style={{height: '100px',width: '30%',padding: '30px', background: '#fff', margin: '5px'}}>
-                        <div style={{fontSize: '1.5em', color: '#2196F3'}}>Total Fund Raised</div>
-                        <div style={{fontSize: '32px', padding: '5px'}}>1,10,570</div>
+                    <div style={{height: '100px',width: '30%',padding: '30px', background: '#fff', margin: '5px', 'fontSize': '11px'}}>
+                        <div style={{marginBottom: '25px', textTransform: 'uppercase', fontSize: '13px', color: '#2196F3'}}>Total Fund Raised</div>
+                        <div style={{fontSize: '32px', padding: '5px'}}>Rs 10.2 K</div>
                     </div>
                     <div style={{height: '100px',width: '30%',padding: '30px', background: '#fff', margin: '5px'}}>
-                        <div style={{fontSize: '1.5em', color: '#2196F3'}}>Total Lives Saved</div>
+                        <div style={{marginBottom: '25px', textTransform: 'uppercase', fontSize: '13px', color: '#2196F3'}}>Total Lives Saved</div>
                         <div style={{fontSize: '32px',  padding: '5px'}}>2</div>
                     </div>
                     <div style={{height: '100px',width: '30%',padding: '30px', background: '#fff', margin: '5px'}}>
-                        <div style={{fontSize: '1.5em', color: '#2196F3'}}>Total Visitors</div>
+                        <div style={{marginBottom: '25px', textTransform: 'uppercase', fontSize: '13px', color: '#2196F3'}}>Total Visitors</div>
                         <div style={{fontSize: '32px', padding: '5px'}}>5,200</div>
                     </div>
                 </div>
