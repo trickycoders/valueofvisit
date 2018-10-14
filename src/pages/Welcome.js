@@ -60,9 +60,11 @@ class Welcome extends Component {
                 <div className={s['integeration-options']}>
                 {isCnameLinkVisible && <CnameLink toggleCNAMELinkBox={this.toggleCNAMELinkBox}/>}
                 {isWidgetLinkVisible && <WidgetLink />}
-                <ShowCnameLinks />
+                
                 </div>
-
+                <div className={s['integeration-options']}>
+                    <ShowCnameLinks />     
+                </div>   
 
  
 

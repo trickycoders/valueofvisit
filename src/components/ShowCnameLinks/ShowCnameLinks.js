@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+// import './ShowCnameLinks/ShowCnameLinks.css';
 
 class ShowCnameLinks extends Component {
     constructor(props) {
@@ -26,12 +27,14 @@ class ShowCnameLinks extends Component {
         } = this.state;
         console.log(cnameValues);
         return(
-            <ul> 
-                {cnameValues && cnameValues.map(cnameValue => (
-                     <li key={cnameValue.type+cnameValue.cname}>{cnameValue.cname}</li>
-                    ))
-                }
-            </ul>
+            <div className='linkWidgetBox'>
+                <div> 
+                    {cnameValues && cnameValues.map(cnameValue => (
+                        <div key={cnameValue.type+cnameValue.cname}>{cnameValue.cname}</div>
+                        ))
+                    }
+                </div>
+            </div>
         )
     }
 }
