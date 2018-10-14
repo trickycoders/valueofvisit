@@ -4,6 +4,7 @@ import s from './welcome.module.css';
 import Widget from '../components/Widget/Widget';
 import CnameLink from '../components/CnameLink/CnameLink';
 import WidgetLink from '../components/WidgetLink/WidgetLink';
+import ShowCnameLinks from '../components/ShowCnameLinks/ShowCnameLinks';
 
 class Welcome extends Component {
     constructor(props) {
@@ -59,6 +60,7 @@ class Welcome extends Component {
                 <div className={s['integeration-options']}>
                 {isCnameLinkVisible && <CnameLink toggleCNAMELinkBox={this.toggleCNAMELinkBox}/>}
                 {isWidgetLinkVisible && <WidgetLink />}
+                <ShowCnameLinks />
                 </div>
 
 

@@ -8,9 +8,22 @@ class CnameLink extends Component {
         this.state = {
             cnameValue: '',
             isWidgetLinkVisible: false,
+            cnamesValue:null
         }
     }
 
+    componentDidMount(){
+        let cnamesValue = null;
+        if(typeof(Storage) !== 'undefined') {
+            cnamesValue = localStorage.getItem('cnamesValues');
+        }
+
+        if(cnamesValue) {
+            this.setState({
+                cnames: cnamesValue,
+            });
+        }
+    }
 
     linkMyCname = () => {
         const {
@@ -20,6 +33,12 @@ class CnameLink extends Component {
         this.setState({
             isDomainLinked: true,
         });
+
+        if(typeof(Storage) !== 'undefined') {
+            let cname = JSON.parse(localStorage.getItem("cnamesValues") || "[]");
+            cname.push({type: 'iframe', cname: `${cnameValue}`});
+            localStorage.setItem("cnamesValues", JSON.stringify(cname));
+        }
         // this.props.toggleCNAMELinkBox();
 
         console.log('cnameValue: ', cnameValue);
