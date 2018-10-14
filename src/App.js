@@ -8,8 +8,7 @@ import Iframe from './pages/Iframe';
 import WidgetPage from './pages/WidgetPage';
 import Stats from './pages/Stats';
 import './App.css';
-
-
+import ReportPage from './pages/ReportPage';
 
 class App extends Component {
   constructor(props) {
@@ -29,6 +28,7 @@ class App extends Component {
             <Route path="/stats" component={Stats} />
             <Route path="/iframe/:domainname" component={Iframe} />
             <Route path="/widget/:domainname" component={WidgetPage} />
+            <Route path="/reports" component={ReportPage} />
       </div>
       </Router>
     );
